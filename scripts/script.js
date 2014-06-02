@@ -10,7 +10,7 @@ function doKast($scope){
 		}
 		console.log($scope.proc);
     };
-    $scope.graph = function InitChart() {
+    $scope.graph = function() {
     	  $("#visualisation").empty();
 		  var barData = [{
 		    'x': 1,
@@ -61,6 +61,7 @@ function doKast($scope){
 		      .scale(yRange)
 		      .tickSize(5)
 		      .orient("left")
+		      .tickFormat(function(d) { return d + "%"; })
 		      .tickSubdivide(true);
 
 
@@ -89,6 +90,8 @@ function doKast($scope){
 		      return ((HEIGHT - MARGINS.bottom) - yRange(d.y));
 		    })
 		    .attr('fill', 'teal')
+		    .append("svg:title")
+   			.text(function(d) { return "Antal: " + num[d.x-1] + " Procentdel: " + Math.floor(d.y) + "%"; });
 
 		}
 
