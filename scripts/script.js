@@ -144,5 +144,5 @@ function validate(evt) {
   if( !regex.test(key) ) {
     theEvent.returnValue = false;
     if(theEvent.preventDefault) theEvent.preventDefault();
-  }
+  } 
 }
