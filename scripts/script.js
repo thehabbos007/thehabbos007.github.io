@@ -143,8 +143,8 @@ function chk(fld)
 {
     if(+fld.value>1000000)
     {
-        alert("Pls 1.000.000");
-        fld.value="1000000";
+        alert("Pls 10.000.000");
+        fld.value="10000000";
         fld.focus();
         return;
     }
