@@ -94,6 +94,17 @@ function doKast($scope){
 
 }
 
+function validate(evt) {
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  } 
+}
+
 var num = [0,0,0,0,0,0];
 function beginCalc(times){
 	var nu = [0,0,0,0,0,0];
@@ -136,13 +147,3 @@ function chk(fld)
     }
 }
 
-function validate(evt) {
-  var theEvent = evt || window.event;
-  var key = theEvent.keyCode || theEvent.which;
-  key = String.fromCharCode( key );
-  var regex = /[0-9]|\./;
-  if( !regex.test(key) ) {
-    theEvent.returnValue = false;
-    if(theEvent.preventDefault) theEvent.preventDefault();
-  } 
-}
