@@ -3,6 +3,9 @@
 
 	<head>
 		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
 		<title>Terning kast!</title>
 
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
@@ -12,31 +15,35 @@
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<style>
-
-        
-         
-       
-
-</style>
+		
 	</head>
 
 	<body ng-app ng-controller="doKast">
+		<div>
+				<div id="main" >
+					<div class="tooltip" >
 
-		<div id="main">
+						<input type="text" ng-model="value" onkeyup="chk(this);" onkeypress="validate(event)" />
+						<button ng-click="do(); graph();">KAST!</button>
+					</div>
 
-			<div class="tooltip" >
+				<div id="tooltips" class="hidden">
+				    <p><strong id="titles">Important Label Heading</strong>
+				    </p>
+				    <p id="values"></p>
+				</div>	
 
-				<input type="text" ng-model="value" onkeyup="chk(this);" onkeypress="validate(event)" />
-				<button ng-click="do(); graph();">KAST!</button>
+				<svg id="visualisation" width="1000" height="500" >
+				</svg>
+
 			</div>
-		<svg id="visualisation" width="1000" height="500" onload=""></svg>
 		</div>
 
 
 		<script src="http://d3js.org/d3.v2.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-		<script src="scripts\script.js"></script>
+		<script src="https://code.angularjs.org/1.2.6/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.2.6/angular-animate.min.js"></script>
+		<script src="scripts/script.js"></script>
 	</body>
 </html>

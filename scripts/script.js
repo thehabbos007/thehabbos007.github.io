@@ -11,6 +11,7 @@ function doKast($scope){
 		console.log($scope.proc);
     };
     $scope.graph = function() {
+
     	  $("#visualisation").empty();
 		  var barData = [{
 		    'x': 1,
@@ -90,12 +91,28 @@ function doKast($scope){
 		      return ((HEIGHT - MARGINS.bottom) - yRange(d.y));
 		    })
 		    .attr('fill', 'teal')
-		    .append("svg:title")
-   			.text(function(d) { return "Antal: " + num[d.x-1] + " Procentdel: " + Math.floor(d.y) + "%"; });
-
-		}
-
+   			.on("mouseover", function (d) {
+   		  d3.select(this)
+    		.attr('fill', '')
+    		.classed("active", true )
+    	  d3.select("#tooltips")
+	        .style("left", d3.event.pageX + "px")
+	        .style("top", d3.event.pageY + "px")
+	        .style("opacity", 1)
+	        .select("#values")
+	        .html("<span>Slået " + $scope.num[d.x-1] + " gange</span><br/><span>Procentdel:" + String(d.y).substring(0,9) + "%</span>")
+	      d3.select("#titles")
+	        .text("Nummer: " + d.x)
+	    	})
+	    	.on("mouseout",  function() {
+  		  d3.select(this)
+    		.classed("active", false)
+    		.attr('fill', 'teal')
+  			});
+ 	}
+		
 }
+
 
 function validate(evt) {
   var theEvent = evt || window.event;
@@ -149,4 +166,3 @@ function chk(fld)
         return;
     }
 }
-
