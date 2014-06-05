@@ -91,10 +91,16 @@ function doKast($scope){
 		      return ((HEIGHT - MARGINS.bottom) - yRange(d.y));
 		    })
 		    .attr('fill', 'teal')
+
    			.on("mouseover", function (d) {
    		  d3.select(this)
     		.attr('fill', '')
     		.classed("active", true )
+    		.on("click",function (d) {
+                var clip = new ZeroClipboard.Client();
+                var myTextToCopy = "Hi, this is the text to copy!";
+                clip.setText( myTextToCopy );
+    		})
     	  d3.select("#tooltips")
 	        .style("left", d3.event.pageX + "px")
 	        .style("top", d3.event.pageY + "px")
