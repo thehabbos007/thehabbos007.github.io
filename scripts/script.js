@@ -1,3 +1,4 @@
+$("#visualisation").hide();
 
 function doKast($scope){
 
@@ -11,8 +12,9 @@ function doKast($scope){
 		console.log($scope.proc);
     };
     $scope.graph = function() {
-
     	  $("#visualisation").empty();
+  		  $("#visualisation").show();
+
 		  var barData = [{
 		    'x': 1,
 		    'y': $scope.proc[0]
@@ -77,6 +79,7 @@ function doKast($scope){
 		    .call(yAxis);
 
 		  vis.selectAll('rect')
+		    .attr('class', 'rect')
 		    .data(barData)
 		    .enter()
 		    .append('rect')
@@ -95,12 +98,7 @@ function doKast($scope){
    			.on("mouseover", function (d) {
    		  d3.select(this)
     		.attr('fill', '')
-    		.classed("active", true )
-    		.on("click",function (d) {
-                var clip = new ZeroClipboard.Client();
-                var myTextToCopy = "Hi, this is the text to copy!";
-                clip.setText( myTextToCopy );
-    		})
+    		.classed("active", true );
     	  d3.select("#tooltips")
 	        .style("left", d3.event.pageX + "px")
 	        .style("top", d3.event.pageY + "px")

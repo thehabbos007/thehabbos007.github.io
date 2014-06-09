@@ -10,6 +10,7 @@
 
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
 		<link href="css\style.css" rel="stylesheet" />
+		<link href="css\animate.css" rel="stylesheet" />
 		<link rel="icon" type="image/png" href="css\fav.gif" />
 
 		<!--[if lt IE 9]>
@@ -20,12 +21,13 @@
 
 	<body ng-app ng-controller="doKast">
 		<div>
-				<div id="main" >
+				<div id="main" class="animated fadeInLeft">
 					<div class="tooltip" >
 
 						<input type="text" ng-model="value" onkeyup="chk(this);" onkeypress="validate(event)" />
 						<button ng-click="do(); graph();">KAST!</button>
 					</div>
+				<svg id="visualisation" width="1000" height="500" class="animated fadeInLeft">
 
 				<div id="tooltips" class="hidden">
 				    <p><strong id="titles"></strong>
@@ -33,7 +35,6 @@
 				    <p id="values"></p>
 				</div>	
 
-				<svg id="visualisation" width="1000" height="500" >
 				</svg>
 
 			</div>
@@ -42,7 +43,6 @@
 		<script src="http://d3js.org/d3.v2.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="https://code.angularjs.org/1.2.6/angular.min.js"></script>
-		<script src="https://code.angularjs.org/1.2.6/angular-animate.min.js"></script>
 		<script src="scripts/script.js"></script>
 	</body>
 </html>
