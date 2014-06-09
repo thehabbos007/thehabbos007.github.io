@@ -6,8 +6,8 @@
 
 body{
 	font:15px/1.3 'Open Sans', sans-serif;
-	background-color: #bdc3c7;
 	text-align:center;
+	background-color: #F0FFFF;
 }
 
 a, a:visited {
@@ -25,11 +25,11 @@ section, footer, header, aside, nav{
 
 
 .tooltip{
-	background-color:#008080;
+	background-color:#26A3D9;
 
-	background-image:-webkit-linear-gradient(top, #5c9bb7, #008080);
-	background-image:-moz-linear-gradient(top, #5c9bb7, #008080);
-	background-image:linear-gradient(top, #5c9bb7, #008080);
+	background-image:-webkit-linear-gradient(top, #26A3D9, #26A3D9);
+	background-image:-moz-linear-gradient(top, #26A3D9, #26A3D9);
+	background-image:linear-gradient(top, #26A3D9, #26A3D9);
 
 	border-radius:3px;
 	width: 290px;
@@ -82,8 +82,12 @@ section, footer, header, aside, nav{
 	font-family: inherit;
 	font-weight: bold;
 	outline: none;
-	background-color:#5c9bb7;
+	background-color:#C8CBCC;
 
+}
+
+.tooltip button:hover{
+	cursor:pointer;
 }
 
 #main{
@@ -143,5 +147,5 @@ section, footer, header, aside, nav{
 }
 
 .active {
-  fill: #27ae60;
+  fill: #6ADCD8;
 }

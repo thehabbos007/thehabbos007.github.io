@@ -93,11 +93,11 @@ function doKast($scope){
 		    .attr('height', function (d) {
 		      return ((HEIGHT - MARGINS.bottom) - yRange(d.y));
 		    })
-		    .attr('fill', 'teal')
+		    .attr('fill', '#26A3D9')
 
    			.on("mouseover", function (d) {
    		  d3.select(this)
-    		.attr('fill', '')
+    		.attr('fill', '#6ADCD8')
     		.classed("active", true );
     	  d3.select("#tooltips")
 	        .style("left", d3.event.pageX + "px")
@@ -111,7 +111,7 @@ function doKast($scope){
 	    	.on("mouseout",  function() {
   		  d3.select(this)
     		.classed("active", false)
-    		.attr('fill', 'teal')
+    		.attr('fill', '#26A3D9')
   			});
  	}
 		
