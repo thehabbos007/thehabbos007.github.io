@@ -117,18 +117,6 @@ function doKast($scope){
 		
 }
 
-
-function validate(evt) {
-  var theEvent = evt || window.event;
-  var key = theEvent.keyCode || theEvent.which;
-  key = String.fromCharCode( key );
-  var regex = /[0-9]|\./;
-  if( !regex.test(key) ) {
-    theEvent.returnValue = false;
-    if(theEvent.preventDefault) theEvent.preventDefault();
-  } 
-}
-
 var num = [0,0,0,0,0,0];
 function beginCalc(times){
 	var nu = [0,0,0,0,0,0];
@@ -141,13 +129,15 @@ function beginCalc(times){
 	return num;
 }
 
-function chk(fld){
-    if(+fld.value>1000000000){
-        fld.value="1000000000";
-    }
-}
+
 $("#1").keyup(function(event){
     if(event.keyCode == 13){
         $("#2").click();
     }
+})
+	   .on("input", function() {
+    if(+this.value>1000000000){
+        this.value="1000000000";
+    }
+  
 });
