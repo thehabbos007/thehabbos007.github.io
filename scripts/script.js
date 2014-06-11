@@ -1,9 +1,9 @@
-$("#visualisation").hide();
+
 
 function doKast($scope){
 
  	$scope.do = function() {
-    	beginCalc($scope.value);
+    	kast($scope.value);
     	$scope.num = num;
 		$scope.proc = [];
 		for (var i = 0; i < num.length; i++) {
@@ -118,7 +118,7 @@ function doKast($scope){
 }
 
 var num = [0,0,0,0,0,0];
-function beginCalc(times){
+function kast(times){
 	var nu = [0,0,0,0,0,0];
 	while( times > 0 ){
 		dice = Math.floor(Math.random() * 6);
@@ -142,6 +142,7 @@ $("#1").keyup(function(event){
 });
 
 $(document).ready(function() {
+	$("#visualisation").hide();
 	var boring = new Konami();
 	boring.load('http://pastebin.com/4A5gimJ9')
 });
