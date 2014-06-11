@@ -24,7 +24,7 @@ section, footer, header, aside, nav{
 }
 
 
-.tooltip{
+.main{
 	background-color:#26A3D9;
 
 	background-image:-webkit-linear-gradient(top, #26A3D9, #26A3D9);
@@ -43,7 +43,7 @@ section, footer, header, aside, nav{
 
 }
 
-.tooltip:after{
+.main:after{
 	content:'';
 	position:absolute;
 	border:6px solid #008080;
@@ -56,7 +56,7 @@ section, footer, header, aside, nav{
 
 }
 
-.tooltip input{
+.main input{
 	border: none;
 	width: 100%;
 	line-height: 34px;
@@ -70,7 +70,7 @@ section, footer, header, aside, nav{
 	outline: none;
 
 }
-.tooltip button{
+.main button{
 	margin-top: 1%;
 	border: none;
 	width: 100%;
@@ -86,7 +86,7 @@ section, footer, header, aside, nav{
 
 }
 
-.tooltip button:hover{
+.main button:hover{
 	cursor:pointer;
 }
 

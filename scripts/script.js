@@ -125,8 +125,7 @@ function beginCalc(times){
 		nu[dice]++;
 		times--;
 	}
-	num = nu;
-	return num;
+	return num = nu;
 }
 
 
@@ -136,8 +135,8 @@ $("#1").keyup(function(event){
     }
 })
 	   .on("input", function() {
-    if(+this.value>1000000000){
-        this.value="1000000000";
+    if(this.value > 1000000000){
+        this.value = "1000000000";
     }
   
 });
