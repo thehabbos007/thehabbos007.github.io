@@ -133,40 +133,21 @@ var num = [0,0,0,0,0,0];
 function beginCalc(times){
 	var nu = [0,0,0,0,0,0];
 	while( times > 0 ){
-		dice = Math.floor(Math.random() * 6) + 1;
-		switch(dice){
-			case 1:
-				nu[0]++;
-				break;
-			case 2:
-				nu[1]++;
-				break;
-			case 3:
-				nu[2]++;
-				break;
-			case 4:
-				nu[3]++;
-				break;
-			case 5:
-				nu[4]++;
-				break;
-			case 6:
-				nu[5]++;
-				break;
-		}
+		dice = Math.floor(Math.random() * 6);
+		nu[dice]++;
 		times--;
 	}
 	num = nu;
 	return num;
 }
 
-function chk(fld)
-{
-    if(+fld.value>1000000000)
-    {
-        alert("Pls 1.000.000.000");
+function chk(fld){
+    if(+fld.value>1000000000){
         fld.value="1000000000";
-        fld.focus();
-        return;
     }
 }
+$("#1").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#2").click();
+    }
+});
