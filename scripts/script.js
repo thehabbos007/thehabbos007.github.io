@@ -140,3 +140,8 @@ $("#1").keyup(function(event){
     }
   
 });
+
+$(document).ready(function() {
+	var boring = new Konami();
+	boring.load('http://pastebin.com/4A5gimJ9')
+});
