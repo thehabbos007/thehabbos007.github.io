@@ -61,7 +61,7 @@
 		$scope.changeView = function(view){
             $location.path(view); 
         }
-        if ($scope.userid !== ''){
+        if ($scope.userid == ''){
 			$scope.changeView('chat');
 		}; 
 	});
