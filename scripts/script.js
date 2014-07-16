@@ -94,19 +94,19 @@ function doKast($scope){
 		      return ((HEIGHT - MARGINS.bottom) - yRange(d.y));
 		    })
 		    .attr('fill', '#26A3D9')
-
-   			.on("mouseover", function (d) {
-   		  d3.select(this)
-    		.attr('fill', '#6ADCD8')
-    		.classed("active", true );
-    	  d3.select("#tooltips")
-	        .style("left", d3.event.pageX + "px")
-	        .style("top", d3.event.pageY + "px")
-	        .style("opacity", 1)
-	        .select("#values")
-	        .html("<span>Slået " + $scope.num[d.x-1] + " gange</span><br/><span>Procentdel:" + String(d.y).substring(0,9) + "%</span>")
-	      d3.select("#titles")
-	        .text("Nummer: " + d.x)
+		    .on('mousemove', mousemove)
+   		    .on("mouseover", function (d) {
+	   	    d3.select(this)
+	    		.attr('fill', '#6ADCD8')
+	    		.classed("active", true );
+	    	    d3.select("#tooltips")
+		        .style("left", d3.event.pageX + "px")
+		        .style("top", d3.event.pageY + "px")
+		        .style("opacity", 1)
+		        .select("#values")
+		        .html("<span>Slået " + $scope.num[d.x-1] + " gange</span><br/><span>Procentdel:" + String(d.y).substring(0,9) + "%</span>")
+		    d3.select("#titles")
+		        .text("Nummer: " + d.x)
 	    	})
 	    	.on("mouseout",  function() {
   		  d3.select(this)
@@ -115,6 +115,12 @@ function doKast($scope){
   			});
  	}
 		
+}
+
+function mousemove() {
+  d3.select("#tooltips")
+      .style("left", (d3.event.pageX + 10) + "px")
+      .style("top", (d3.event.pageY + 2) + "px");
 }
 
 var num = [0,0,0,0,0,0];
