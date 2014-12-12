@@ -21,7 +21,7 @@ a:active {color: #a3a3a3;}
 .header {
     margin: 0 auto;
     padding-bottom: 5px;
-    background: #f8f8f8 url(/img/pattern.jpg) left top repeat;
+    background: #f8f8f8 url(kbook/img/pattern.jpg) left top repeat;
     border-top: 3px solid #3498db;
     -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
     -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
@@ -66,8 +66,8 @@ a:active {color: #a3a3a3;}
     margin: 15px 0 0 20px;
 }
 
-.links a.home { background: url(/img/home.png) center center no-repeat; }
-.links a.blog { background: url(/img/blog.png) center center no-repeat; margin-right: 50px; }
+.links a.home { background: url(kbook/img/home.png) center center no-repeat; }
+.links a.blog { background: url(kbook/img/blog.png) center center no-repeat; margin-right: 50px; }
 
 .register-container {
     margin-top: 50px;
@@ -78,7 +78,7 @@ a:active {color: #a3a3a3;}
 
 .contenterino {
     padding: 20px 50px 40px 50px;
-    background: #f8f8f8 url(/img/pattern.jpg) left top repeat;
+    background: #f8f8f8 url(kbook/img/pattern.jpg) left top repeat;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
@@ -113,7 +113,7 @@ a:active {color: #a3a3a3;}
 
 .register form {
     padding: 20px 50px 40px 50px;
-    background: #f8f8f8 url(/img/pattern.jpg) left top repeat;
+    background: #f8f8f8 url(kbook/img/pattern.jpg) left top repeat;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
@@ -126,7 +126,7 @@ a:active {color: #a3a3a3;}
 .register form h2 {
     margin-bottom: 25px;
     padding-bottom: 15px;
-    background: url(/img/pencil.png) 70px 6px no-repeat;
+    background: url(kbook/img/pencil.png) 70px 6px no-repeat;
     border-bottom: 2px dotted #bbb;
     font-size: 30px;
     font-weight: 400;
@@ -222,7 +222,7 @@ a:active {color: #a3a3a3;}
 
 @media (max-width: 1200px) {
 
-    .register form h2 { background: url(/img/pencil.png) 20px 6px no-repeat; }
+    .register form h2 { background: url(kbook/img/pencil.png) 20px 6px no-repeat; }
 
 }
 
