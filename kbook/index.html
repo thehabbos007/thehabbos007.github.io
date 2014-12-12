@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bedste social app</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700'>
+	<link href="bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="logo span4">
+					<h1>KBook<span class="blue">.</span></h1>
+				</div>
+				<div class="links span8">
+					<!--<a class="home" href="" rel="tooltip" data-placement="bottom" data-original-title="Blog"></a>-->
+					<!--<a class="blog" href="" rel="tooltip" data-placement="bottom" data-original-title="Blog"></a>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="register-container container">
+		<div class="row">
+			<div class="phone span5">
+				<img id="phone" src="img/phone.png">
+			</div>
+			<div class="register span6">
+				<form action="http://localhost:8080/main.html" id="opret">
+                        <h2>Opret <span class="blue"><strong>KBook</strong></span> Profil</h2>
+                        
+                        <label for="fornavn">Fornavn</label>
+                        <input type="text" id="fornavn" name="fornavn" placeholder="Indtast dit fornavn">
+                        
+                        <label for="efternavn">Efternavn</label>
+                        <input type="text" id="efternavn" name="efternavn" placeholder="Indtast dit efternavn">
+                        
+                        <label for="mobilnummer">Mobilnummer</label>
+                        <input type="text" id="mobilnummer" name="mobilnummer" placeholder="Indtast mobilnummer">
+                        
+						<label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Indtast din email">
+
+                        <label for="alder">Alder</label>
+                        <input type="number" id="alder" name="alder" placeholder="Indtast din alder">
+
+                        <label for="adgangskode">Adgangskode</label>
+                        <input type="password" id="adgangskode" name="adgangskode" placeholder="vælg en adgangskode">
+
+                        <label style="color:#b3b3b3;" for="submit">Ved at trykke OPRET acceptere du vores <a  data-toggle="modal" data-target="#firstmodal" data-remote="remote-page.html" href="">brugsbetingelser</a> og erklærer at du har læst vores politik for <a data-toggle="modal" data-target="#largeModal" data-remote="remote-page.html" href="">brug af data</a>.</label>
+                        <button type="submit" name="submit">OPRET</button>
+                    </form>
+			</div>
+		</div>
+	</div>
+<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Brug af data</h4>
+      </div>
+      <div class="modal-body">
+        <p>Vi har lov til at sælge og bruge dine oplysninger og billeder, efter vores behov
+Find venner: Vi tilbyder værktøjer til at hjælpe dig i gang med at overføre dine venners kontaktoplysninger, så du og andre kan finde venner på KBook og invitere venner, der ikke bruger KBook til at blive medlem. Desuden kan vi tilbyde dig og andre en bedre oplevelse på KBook via forslag samt andre tilpassede oplevelser.
+Når du opretter en profil på KBook, bliver du bedt om at oplyse informationer som dit navn, din e-mailadresse, din fødselsdag og dit køn. Nogle gange kan du måske tilmelde dig vha. andre oplysninger, f.eks. dit telefonnummer.
+Når du slår indhold op på KBook, f.eks. billeder og videoer, modtager vi muligvis yderligere relaterede data (eller metadata) om eksempelvis klokkeslættet, datoen og stedet for billed- eller videooptagelsen. Dette vil også blive gemt for os så vi kan sælge det og bruge det efter vores behov.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="firstmodal" tabindex="-1" role="dialog" aria-labelledby="firstmodal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Brugsbetingelser</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+        	Erklæring om rettigheder og ansvar
+
+Denne aftale blev skrevet på dansk. I det omfang en oversat version af denne Aftale i strid med den danske version, er den danske version tages som juridisk gældende udgave. Bemærk venligst, at § 17 indeholder visse ændringer af de generelle vilkår for brugere uden for Danmark.
+
+Dato for sidste revision: 10 december 2014.
+
+Erklæring om rettigheder og ansvar
+
+Denne erklæring om rettigheder og ansvar ("Statement", "Bestemmelser" eller "SRR") stammer fra KBook principper og vores servicevilkår, der regulerer vores forhold til brugere og andre, der interagerer med KBook. Ved at bruge eller få adgang KBook, accepterer du denne erklæring, som opdateres fra tid til anden i overensstemmelse med § 14 nedenfor. Derudover vil du finde ressourcer i slutningen af dette dokument, der hjælper dig med at forstå, hvordan KBook fungerer.
+
+Data brugerpolitik: Data brugerpolitik indeholder oplysninger til at hjælpe dig med at forstå, hvordan vi indsamler og bruger information.
+Betalingsbetingelser: Disse yderligere vilkår gælder for alle betalinger på eller gennem KBook.
+Platform Side: Denne side hjælper dig med bedre at forstå, hvad der sker, når du tilføjer en tredjepartsprogram eller brug KBook Connect, herunder hvordan de kan få adgang til og bruge dine data.
+KBook Platform Politikker: Disse retningslinjer skitsere de politikker, der gælder for ansøgninger, herunder Connect sites.
+Reklame Retningslinjer: Disse retningslinjer skitsere de politikker, der gælder for reklamer placeret på KBook.
+Kampagner Retningslinjer: Disse retningslinjer skitsere de politikker, der gælder, hvis du tilbyder konkurrencer, lotterier og andre former for kampagner på KBook.
+KBook Brand Resources: Disse retningslinjer skitsere de politikker, der gælder for brug af KBook varemærker, logoer og screenshots.
+Sådan Rapporter Påstande om Intellectual Property Overtrædelse
+Sider Vilkår: Disse retningslinjer gælder for brugen af KBook sider.
+EF-standarder: Disse retningslinjer skitsere vores forventninger til det indhold, du sender til KBook og dine aktiviteter på KBook.
+
+
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+	<script src="script.js"></script>
+
+</body>
+</html>
