@@ -6,21 +6,13 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.pie{
-  z-index:3;
-  pointer-events: none;
-}
+
 span {
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
   -ms-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-}
-
-#moonp{
-  z-index:2;
-  cursor: pointer;
 }
 
 #moon {
@@ -31,6 +23,7 @@ span {
   height: 300px;
   left: 50%;
   top: 50%;
+  z-index: 2;
 }
 
 /* --------------------------------- 
@@ -46,7 +39,7 @@ span {
   left: 50%;
   top: 50%;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-  z-index:0;
+  z-index: 0;
 }
 
 .circle1:nth-child(11n+0) {
@@ -350,7 +343,10 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-
+.pie{
+  z-index: 3;
+  pointer-events:none;
+}
 h1 {
   font-family: Impact, Charcoal, sans-serif;
   letter-spacing: 0.5vw;
