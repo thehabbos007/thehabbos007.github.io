@@ -15,6 +15,10 @@ span {
   transition: opacity 0.3s ease;
 }
 
+#moonp{
+  cursor: pointer;
+}
+
 #moon {
   position: absolute;
   fill: #FCF8F4;
