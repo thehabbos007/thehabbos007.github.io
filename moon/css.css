@@ -8,6 +8,8 @@
 }
 img .circle{
   pointer-events: none;
+  height:0px;
+  overflow:visible;
 }
 span {
   -webkit-transition: opacity 0.3s ease;
