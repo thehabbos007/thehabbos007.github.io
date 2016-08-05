@@ -6,7 +6,9 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+img .circle{
+  pointer-events: none;
+}
 span {
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
