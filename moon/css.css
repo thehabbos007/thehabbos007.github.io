@@ -7,9 +7,8 @@
   transform: translate(-50%, -50%);
 }
 img .circle{
+  z-index:3;
   pointer-events: none;
-  height:0px;
-  overflow:visible;
 }
 span {
   -webkit-transition: opacity 0.3s ease;
@@ -20,6 +19,7 @@ span {
 }
 
 #moonp{
+  z-index:2;
   cursor: pointer;
 }
 
@@ -46,6 +46,7 @@ span {
   left: 50%;
   top: 50%;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  z-index:0;
 }
 
 .circle1:nth-child(11n+0) {
