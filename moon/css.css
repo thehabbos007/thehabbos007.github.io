@@ -346,6 +346,7 @@ body {
 .pie{
   z-index: 3;
   pointer-events:none;
+  cursor:pointer;
 }
 h1 {
   font-family: Impact, Charcoal, sans-serif;
